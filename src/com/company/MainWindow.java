@@ -5,6 +5,8 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -28,10 +30,10 @@ public class MainWindow extends Application{
         vBox.getChildren().add(fieldForURL);
         vBox.getChildren().add(generateButton);
 
-        Rectangle centerRectangle = new Rectangle(100, 100, Color.BLACK);
+        QRImage newImage = new QRImage();
 
         layout.setTop(vBox);
-        layout.setCenter(centerRectangle);
+        layout.setCenter(newImage);
 
         primaryStage.setTitle("Generator");
         primaryStage.setScene(scene);
